@@ -14,15 +14,7 @@ const imagesHTML = galleryItems
 
 gallery.insertAdjacentHTML('beforeend', imagesHTML);
 
-const modal = new SimpleLightbox('.gallery__link', {
+new SimpleLightbox('.gallery__link', {
     captionsData: 'alt',
     captionDelay: 250,
 });
-
-const showOriginalImage = (event) => {
-    event.preventDefault();
-
-    modal.open(event.target.src);
-};
-
-gallery.addEventListener('click', showOriginalImage);
